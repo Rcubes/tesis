@@ -1,0 +1,18 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">PROBANDO QUE PASA</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/THDFHGHHD" target="blank">Published with bookdown</a></li>
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  pandoc_args: --top-level-division=chapter
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+  template: template.tex
+bookdown::epub_book: default
